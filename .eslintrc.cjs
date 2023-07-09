@@ -1,13 +1,15 @@
-/* eslint-env node */
 
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    es2020: true 
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react-hooks/recommended',
+    'plugin:react-hooks/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -15,9 +17,18 @@ module.exports = {
     sourceType: 'module',
     project: true,
     tsconfigRootDir: __dirname,
+    ecmaFeatures: {
+      jsx: true
+    },
   },
-  plugins: ['react-refresh'],
+  plugins: [
+    'react-refresh',
+    // 加入 prettier 的 eslint 插件
+    "prettier"
+  ],
   rules: {
+    // 注意要加上这一句，开启 prettier 自动修复的功能
+    // "prettier/prettier": "error",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
