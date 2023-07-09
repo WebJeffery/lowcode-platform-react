@@ -3,15 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.scss'
 import style from './index.module.scss'
-import hell from '@jeffery/editor'
+import {Button} from "antd"
 
 function App() {
   const [count, setCount] = useState(0)
-  hell()
 
   return (
     <>
       <div className={style.header}>
+      <Button
+        style={{float: "right", marginTop: 16}}
+        >
+          退出登录
+      </Button>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

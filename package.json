@@ -14,10 +14,15 @@
   },
   "dependencies": {
     "@jeffery/editor": "workspace:^",
+    "antd": "^5.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "-": "^0.0.1",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/node": "^20.4.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
@@ -25,7 +30,10 @@
     "@vitejs/plugin-react": "^4.0.1",
     "autoprefixer": "^10.4.14",
     "commitizen": "^4.3.0",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-gitmoji": "^2.3.1",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -35,6 +43,7 @@
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "sass": "^1.63.6",
+    "standard-version": "^9.5.0",
     "stylelint": "^15.10.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^4.2.0",
@@ -63,8 +72,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-customizable"
     }
   }
-
 }
