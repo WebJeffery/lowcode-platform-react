@@ -4,7 +4,5 @@
 
 [ -n "$CI" ] && exit 0
 
-npm run lint:ls-lint
-
 # Format and submit code according to lintstagedrc.js configuration
 npm run lint:lint-staged

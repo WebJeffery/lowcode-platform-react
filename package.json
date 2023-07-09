@@ -10,7 +10,9 @@
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "preview": "vite preview",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint:ls-lint": "ls-lint",
+    "lint:lint-staged": "lint-staged -c ./.husky/lint-staged.config.js"
   },
   "dependencies": {
     "@jeffery/editor": "workspace:^",
@@ -60,19 +62,9 @@
   "workspaces": [
     "packages/*"
   ],
-  "lint-staged": {
-    "**/*.{js,jsx,tsx,ts}": [
-      "npm run lint:script",
-      "git add ."
-    ],
-    "**/*.{scss}": [
-      "npm run lint:style",
-      "git add ."
-    ]
-  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-customizable"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
