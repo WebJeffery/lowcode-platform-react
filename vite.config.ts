@@ -9,6 +9,7 @@ import autoprefixer from 'autoprefixer'
 import windi from "vite-plugin-windicss"
 import viteEslint from 'vite-plugin-eslint'
 import viteStylelint from 'vite-plugin-stylelint'
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // 全局 scss 文件的路径
 // 用 normalizePath 解决 window 下的路径问题
@@ -24,6 +25,7 @@ export default defineConfig({
       // 对某些文件排除检查
       exclude: /windicss|node_modules/
     }),
+    tsconfigPaths()
   ],
   // css 相关的配置
   css: {
